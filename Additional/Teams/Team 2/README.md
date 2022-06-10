@@ -24,34 +24,34 @@
 ~ class Bar, Hospital, University - ще имат колекции от поинтери към обекти, които ще се трият чак в крайния клас 
 - По такъв начин, променяйки един Лекар и негови свойства, той ще е променен навсякъде, където се пази (Например, в различни Hospital)
 
-**<class Building>**
+>class Building
 - size_t Relevance - означава точно текущо запазване на една сграда в "%" (Дали трябва да бъде ремонтирана(ако Relevance < 50), или не)
 - Renovate() - напълно оправя сграда -> слага "Relevance" на 100 
 
-**<class Bar> : public  Building**
+>class Bar : public  Building
 1) AddBartender(), AddDrink() - добавя напитки в колекция и само 1 бармен (повече не трябва)
 2) PourDrink() - всеки може да изпие от бара някаква напитка (алкохолна или не). Ако един човек пие алкохолна напитка със съдържание на алкохол > 60 %, то той печели "Alcohol Poisoning" като болест и повече не може да пие, докато няма да я махне 
 
-**<class Hospital> : public  Building**
+>class Hospital : public  Building
 1) PrintDoctorsRoles() - извежда на конзола, кои специализации на 1 лекар изобщо съществуват сега в проекта 
 2) AddDoctor() - … 
 3) CurePatient() - Метод, който вика у конкретния Лекар метод "void CurePatient(Worker* patient, Illness illness)", по който болестта на един пациент може да бъде излекувана
 
-**<class University> : public  Building**
+>class University> : public  Building
 1) PrintProfessorsRoles() - извежда на конзола, кои специализации на 1   професор изобщо съществуват сега в проекта
 2) GiveNewSpecialisation() - Метод, който вика на определения професор метод "void GiveNewSpecialisation(Worker* other, String& NewSpecialisation)",  по който специализация на Builder, Professor или Doctor може да се промени 
      Пример: Doctor беше "Oncologist", а след ф-ция стана "Therapist"
 
-**<class Worker>**
+>class Worker
 - "Vector<Illness> GetIllnesses()" - метод, който връща колекция от болки, които има един човек (после тези дани ще бъдат анализирани в други класове)
 
-**<class Doctor>**
+>class Doctor
 - "CurePatient(Worker* patient, Illness illness)" - Лекува конкретна болка на конкретен човек, който присътства вече в масива от създадени хора 
 
-**<class Professor>**
+>class Professor
 - "GiveNewSpecialisation(Worker* other, String& NewSpecialisation)" - метод, който се вика с помощта на клас "University" и променя специализация на един Лекар, Професор или Строител
 
-**<class DataBase>**
+>class DataBase
 *- Имаме 2 различни категории: People & Buildings*
 
 # Ако влизаме в "People":
@@ -70,19 +70,19 @@
 2) CreateBuilding() - създаваме сграда в системата
 3) Login() - влизаме по името на сграда и избираме ф-ции, които тя предлага
         
-*(3.1) Bar*
+>(3.1) Bar
 - AddBartender()
 - AddDrink()
 - PourDrink() - да налие напитка на указан човек от списъка на създадени (ако цената на напитка <= заплатата на човек)
 - PrintInfo()
                                                                                                            
-*(3.2) Hospital*
+>(3.2) Hospital
 - AddDoctor()
 - PrintDoctorRoles() - принтира всички роли, които могат да приемат лекари в проекта
 - CurePatient() - лекува пациент по неговото име и името на болка 
 - PrintInfo()
                                                                                                            
-*(3.3) University*
+>(3.3) University
 - AddProfessor()
 - PrintProfessorsRoles() - принтира всички специализации, които могат да приемат професори в проекта
 - GiveNewSpecialisation() - метод, където единия професор може да промени специализация на: друг професор, лекар или строител
