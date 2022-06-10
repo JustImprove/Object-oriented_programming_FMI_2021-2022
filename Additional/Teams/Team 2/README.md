@@ -33,14 +33,15 @@
 2) PourDrink() - всеки може да изпие от бара някаква напитка (алкохолна или не). Ако един човек пие алкохолна напитка със съдържание на алкохол > 60 %, то той получава "Alcohol Poisoning" като болест и повече не може да пие, докато не го премахне 
 
 >class Hospital : public  Building
-1) PrintDoctorsRoles() - извежда на конзола какви специализации може да притежава един лекар 
+1) PrintDoctorRoles() - принтира всички роли, които могат да приемат лекари в проекта 
 2) AddDoctor() - добавя лекар 
 3) CurePatient() - Метод, който вика от конкретния Лекар метод "void CurePatient(Worker* patient, Illness illness)", по който болестта на един пациент може да бъде излекувана
 
->class University> : public  Building
+>class University : public  Building
 1) PrintProfessorsRoles() - извежда на конзола какви специализации може да притежава един професор
 2) GiveNewSpecialisation() - Метод, който вика от определения професор метод "void GiveNewSpecialisation(Worker* other, String& NewSpecialisation)",  по който специализация на Builder, Professor или Doctor може да се промени 
      Пример: Doctor е бил "Oncologist", а след функцията става "Therapist"
+3) PrintProfessorsRoles() - принтира всички специализации, които могат да приемат професори в проекта
 
 >class Worker
 - "Vector<Illness> GetIllnesses()" - метод, който връща съвкупност от болки, които има един човек (после тези дани ще бъдат анализирани в други класове)
@@ -66,10 +67,11 @@
 
 # Относно категория "Buildings":
   ```
+  ```
 1) PrintInfo() - принтираме цялата информация за всяка сграда в системата
 2) CreateBuilding() - създаваме нова сграда в системата
 3) Login() - влизаме по името на сграда и можем да избираме функция, която тя предлага
-        
+  ```   
 (3.1) Bar
 - AddBartender()
 - AddDrink()
@@ -78,12 +80,12 @@
                                                                                                            
 (3.2) Hospital
 - AddDoctor()
-- PrintDoctorRoles() - принтира всички роли, които могат да приемат лекари в проекта
+
 - CurePatient() - лекува пациент по неговото име и името на болката 
 - PrintInfo()
                                                                                                            
 (3.3) University
 - AddProfessor()
-- PrintProfessorsRoles() - принтира всички специализации, които могат да приемат професори в проекта
+
 - GiveNewSpecialisation() - метод, където единия професор може да промени специализация на: друг професор, лекар или строител
  ```                                                                                                           
