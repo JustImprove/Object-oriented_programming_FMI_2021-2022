@@ -54,37 +54,37 @@
 >class DataBase
 *- Имаме две различни категории: People & Buildings*
 
-# Относно категория "People":
+# Console input for category "People":
   ```
-1) PrintInfo() - принтираме цялата информация за всеки човек в системата
-2) CreateWorker() - създаваме човека в системата
-3) Login() - влизаме по Personal Number на човека и можем да избираме функция, която той може да изпълни
-- Да изпринтира за себе си информация
-- Да добави болка 
-- Да промени заплатата си 
+- print
+- create "<Name>" "<Personal Nubmer>" "<Specialisation(CharConstants.h)>" "<Salary>" "<Role>" // Tip: "Role" is elective(is for only Doctors, builders and Professors) 
+- login "<Name>" "<pNumber>"
+     * print
+     * addIllness <Name of illness from Illnesses.h>
+     * changeSalary <Double value>
   ```
-
-# Относно категория "Buildings":
+# Console input for category "Buildings":
   ```
-1) PrintInfo() - принтираме цялата информация за всяка сграда в системата
-2) CreateBuilding() - създаваме нова сграда в системата
-3) Login() - влизаме по името на сграда и можем да избираме функция, която тя предлага
+- print
+- create "<Name>" "<Area>" "<Type of building(CharConstants.h)>" "<Relevance(from 0-100)>" "Location"
+- login "<Name>" 
   ```
 ## Bar        
   ```
-- AddBartender()
-- AddDrink()
-- PourDrink() - да налее напитка на указан човек, ако той може да си я позволи (ако цената на напитка <= заплатата на човек)
-- PrintInfo()
+- addBartender "<Personal number of already created bartender>"
+- addDrink "<Name>" "<Alcohol Percentage(int 0 - 100)>" "Cost(Double positive)"
+- pour "<Personal Number of person>" "<Name of drink>"
+- print
 ```  
 ## Hospital                                                                                                                 
 ```                                                                                                                 
-- AddDoctor()
-- CurePatient() - лекува пациент по неговото име и името на болката 
-- PrintInfo()
+- print
+- addDoctor "<Personal number of already created doctor>"
+- cure "<Personal number of doctor>" "<Personal number of patient>" "<Name of illness from Illnesses.h>"
 ```
 ## University                                                                                                                 
 ```                                                                                                                
-- AddProfessor()
-- GiveNewSpecialisation() - метод, където единия професор може да промени специализация на: друг професор, лекар или строител
+- print
+- addProfessor "<Personal number of already created professor>"
+- giveNewSpecialisation "<Personal number of professor>" "<Personal number of student>" "<Role to be obtained (CharConstants.h>)"
  ```                                                                                                           
