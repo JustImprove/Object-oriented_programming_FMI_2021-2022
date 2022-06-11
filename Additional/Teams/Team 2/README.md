@@ -55,8 +55,8 @@
 - create "<Name>" "<Personal Nubmer>" "<Specialisation(CharConstants.h)>" "<Salary>" "<Role>" // Tip: "Role" is elective(is for only Doctors, builders and Professors) 
 - login "<Name>" "<pNumber>"
      * print
-     * addIllness <Name of illness from Illnesses.h>
-     * changeSalary <Double value>
+     * addIllness "<Name of illness from Illnesses.h>"
+     * changeSalary "<Double value>"
   ```
 # Console input for category "Buildings":
   ```
