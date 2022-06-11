@@ -1,1 +1,1 @@
-## Folder for all ".cpp" file of the project
+## Folder with ".cpp" files for the project
