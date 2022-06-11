@@ -5,9 +5,7 @@
 - Също така всяка сграда предлага определена функционалност, като може да променя определен начин параметрите на един Worker 
 
 # Project structure ->
-```
 ![UML-Diagram of the project](https://github.com/JustImprove/Object-oriented_programming_FMI_2021-2022/blob/PR-task-Teams/Additional/Teams/Team%202/img/UML-Diagram.svg)
-```
 
 ## |Copy & move operations|
 - Copy() operations са забранени за клас Worker и всички наследени от него, защото няма как в реалната ситуация да има два човека с един и същ "Personal Number" иначе той губи смисъла за съществуване. Move() е позволено 
