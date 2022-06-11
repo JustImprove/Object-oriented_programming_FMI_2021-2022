@@ -6,11 +6,7 @@
 
 # Project structure ->
 ```
-1) *Abstract* class Building
-- Inherited: Bar, University, Hospital
-2) *Abstract* class Worker
-- Inherited: Builder, Bartender, Doctor, Professor
-3) class DataBase, class Drink
+![UML-Diagram of the project](https://github.com/JustImprove/Object-oriented_programming_FMI_2021-2022/blob/PR-task-Teams/Additional/Teams/Team%202/img/UML-Diagram.svg)
 ```
 
 ## |Copy & move operations|
