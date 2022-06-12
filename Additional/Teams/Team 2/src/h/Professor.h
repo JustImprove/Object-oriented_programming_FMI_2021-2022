@@ -1,6 +1,5 @@
 #pragma once 
 #include "Worker.h"
-#pragma warning (disable:4996)
 
 class Professor : public Worker 
 {
