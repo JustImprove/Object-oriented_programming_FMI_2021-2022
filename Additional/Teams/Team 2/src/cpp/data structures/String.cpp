@@ -1,7 +1,7 @@
 #include "String.h"
 #include <cstring>
 #include <cmath>
-
+#pragma warning (disable:4996)
 const int MAX_LINE_LENGTH = 1024;
 const int DECIMAL_SYMBOLS = 5;
 
