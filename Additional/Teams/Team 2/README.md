@@ -61,7 +61,7 @@
 # Console input for category "Buildings":
   ```
 - print
-- create "<Name>" "<Area>" "<Type of building(CharConstants.h)>" "<Relevance(from 0-100)>" "Location"
+- create "<Personal number of existed builder>" "<Name of building>" "<Area>" "<Type of building(CharConstants.h)>" "<Relevance(from 0-100)>" "Location"
 - login "<Name>" 
   ```
 ## Bar        
