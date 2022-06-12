@@ -64,7 +64,7 @@
 - print
 - create "<Personal number of existed builder>" "<Name of building>" "<Area>" "<Type of building(CharConstants.h)>" "<Relevance(from 0-100)>" "Location"
 - login "<Name>"
-- renovate "<Buidling Name>" "<Personal Number of Buider>"
+- renovate "<Building Name>" "<Personal Number of already added Builder>"
   ```
 ## Bar        
   ```
