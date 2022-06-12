@@ -1,7 +1,6 @@
 #pragma once
 #include "Illnesses.h" 
 #include "String.h"
-#pragma warning (disable:4996)
 
 /*Abstract*/ class Worker 
 {
