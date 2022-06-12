@@ -1,7 +1,6 @@
 #pragma once 
 #include "Worker.h"
 #include "Building.h"
-#pragma warning (disable:4996)
 
 class Builder : public Worker 
 {
