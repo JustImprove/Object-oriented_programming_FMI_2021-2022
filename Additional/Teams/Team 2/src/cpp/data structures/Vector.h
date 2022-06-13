@@ -43,7 +43,7 @@ class Vector
         void Move(Vector&& other); 
         void Copy(const Vector& other); 
             void Free() {delete[] Collection; Collection = nullptr;};
-        void Resize(size_t ExtendOn = 6); // It'll be used for deleting elements 
+        void Resize(size_t ExtendOn = 6);  
 };
 
 #pragma region Copy & move-semantics
