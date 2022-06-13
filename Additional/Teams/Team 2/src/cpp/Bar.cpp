@@ -34,7 +34,7 @@ void Bar::PourDrink(String DrinkName, Worker* Customer)
         return;
     }
     else if((Customer->GetIllnesses().isExisted(Illness::Alcohol_Poisoning))
-        && (Customer->GetSalary() >= Drinks[ReturnIndex].GetCost()))
+        || (Customer->GetSalary() < Drinks[ReturnIndex].GetCost()))
     {
         std::cout << "This drink can't be consumed by the Customer: { Too less money or illness } !\n";
         return;
