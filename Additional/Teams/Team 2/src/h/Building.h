@@ -19,9 +19,7 @@ const int MAX_DATE_LENGTH = 50;
         
         virtual ~Building() = default;
         Building() {Area = Relevance = 0; BuildingType = Type::Undefined;}; 
-        Building(const String& Name, size_t Area, Type BuildingType, size_t Relevance, const String& Location) 
-            : Name(Name), Area(Area), BuildingType(BuildingType), Location(Location) 
-                {(Relevance > 100) ? this->Relevance = 100 : this->Relevance = Relevance; DetermineDate();};
+        Building(const String& Name, size_t Area, Type BuildingType, size_t Relevance, const String& Location);
         // There is no need to delete copying of one building -> By the fact, in real life can exist two exactly the same buildings 
 
         virtual Building* Clone() const = 0;
