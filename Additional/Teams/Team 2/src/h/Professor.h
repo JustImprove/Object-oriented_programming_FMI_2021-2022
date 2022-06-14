@@ -12,9 +12,9 @@ class Professor : public Worker
             // P.s: Bartender don't have exact specialisation 
         };
     
-        Professor() : Worker() {StudentsThatWereTaught = 0; specialisation = Specialisation::Professor; role = Role::Undefined;};
+        Professor() : Worker(), StudentsThatWereTaught(0), specialisation(Specialisation::Professor), role(Role::Undefined) {};
         Professor(String Name, size_t pNumber, double Salary, Role role): Worker(Name, pNumber, Specialisation::Professor, Salary) 
-            {StudentsThatWereTaught = 0; this->role = role;};
+            : StudentsThatWereTaught(0), role(role) {};
         
         void ChangeSpecialisation(Role role);
         Role GetRole() const {return role;};
