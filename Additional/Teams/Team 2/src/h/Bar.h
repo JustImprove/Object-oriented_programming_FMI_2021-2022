@@ -5,10 +5,8 @@
 class Drink 
 {
     public: 
-        Drink() {AlcoholPercentage = Cost = 0;}; 
-        Drink(const String& Name, size_t AlcoholPercentage, double Cost)
-            {this->Name = Name; this->Cost = Cost; 
-                (AlcoholPercentage > 100) ? this->AlcoholPercentage = 100 : this->AlcoholPercentage = AlcoholPercentage;}; 
+        Drink() : AlcoholPercentage(0), Cost(0) {}; 
+        Drink(const String& Name, size_t AlcoholPercentage, double Cost); 
 
         String GetName() const {return Name;};
         size_t GetAlcoholPercentage() const {return AlcoholPercentage;}; 
@@ -27,7 +25,7 @@ class Bar : public Building
         ~Bar() {delete bartender;};
         Bar() : Building(), bartender(nullptr) {}; 
         Bar(const String& Name, size_t Area, size_t Relevance, const String& Location) 
-            : Building(Name, Area, Type::Entertaining, Relevance, Location) {bartender = nullptr;};
+            : Building(Name, Area, Type::Entertaining, Relevance, Location), bartender(nullptr) {};
         Building* Clone() const override {return new Bar(*this);};
 
         void AddBartender(Bartender* bartender); 
