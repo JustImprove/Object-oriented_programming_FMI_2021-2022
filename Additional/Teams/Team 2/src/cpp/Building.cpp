@@ -1,5 +1,11 @@
 #include "Building.h"
 
+Building::Building(const String& Name, size_t Area, Type BuildingType, size_t Relevance, const String& Location) 
+   : Name(Name), Area(Area), BuildingType(BuildingType), Location(Location) 
+{
+   (Relevance > 100) ? this->Relevance = 100 : this->Relevance = Relevance; 
+       DetermineDate();
+}
 void Building::DetermineDate() 
 {
     char* Temp = new char[MAX_DATE_LENGTH + 1]{};
