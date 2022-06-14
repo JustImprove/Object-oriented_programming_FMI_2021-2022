@@ -5,39 +5,27 @@ void Doctor::CurePatient(Worker* patient, Illness illness)
     if(!patient->GetIllnesses().isExisted(illness)) // Whether this person has stated illness
         std::cout << "Patient don't have such disease !\n";
 
-    if(role == Role::Oncologist) 
+    if((role == Role::Oncologist) && (illness == Illness::Cancer)) 
     {
-        if(illness == Illness::Cancer) // Check, whether current doctor have proper specialisation to cure disease patient has
-        {
-            CuredPatients++;
-            std::cout << "# {" << patient->GetName() << "} was cured from Cancer#\n";
-                CureDisease(patient, illness);
-        }
-        else
-            std::cout << "Such illness can't be cured by this Doctor !\n";
+         CuredPatients++;
+         std::cout << "# {" << patient->GetName() << "} was cured from Cancer#\n";
+            CureDisease(patient, illness);
     }
-    else if(role == Role::Pulmonologist) 
+    else if((role == Role::Pulmonologist) && (illness == Illness::Asthma)) 
     {
-        if(illness == Illness::Asthma)
-        {
-            CuredPatients++;
-            std::cout << "# {" << patient->GetName() << "} was cured from Asthma#\n";
-                CureDisease(patient, illness);
-        }
-        else
-            std::cout << "Such illness can't be cured by this Doctor !\n";
+         CuredPatients++;
+         std::cout << "# {" << patient->GetName() << "} was cured from Asthma#\n";
+            CureDisease(patient, illness);
     }
-    else if(role == Role::Therapist) 
+    else if(((role == Role::Therapist) && (illness == Illness::Rabies))
+           || ((role == Role::Therapist) && (Illness::Alcohol_Poisoning))) 
     {
-        if(illness == Illness::Rabies || illness == Illness::Alcohol_Poisoning)
-        {
-            CuredPatients++;
-            std::cout << "# {" << patient->GetName() << "} was cured from Rabies or Alcohol poisoning#\n";
-                CureDisease(patient, illness);
-        }
-        else
-            std::cout << "Such illness can't be cured by this Doctor !\n";
+          CuredPatients++;
+          std::cout << "# {" << patient->GetName() << "} was cured from Rabies or Alcohol poisoning#\n";
+             CureDisease(patient, illness);
     }
+    else
+        std::cout << "Such illness can't be cured by this Doctor !\n";
 }
 void Doctor::PrintInfo() const 
 {
