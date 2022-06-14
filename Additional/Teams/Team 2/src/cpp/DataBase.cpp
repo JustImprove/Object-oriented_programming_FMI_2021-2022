@@ -7,12 +7,12 @@ const int EXACT_PARAMETRES_FOR_BUILDINGS = 6;
 
 void DataBase::Free() 
 {
-    for (size_t i = 0; i < Buildings.GetSize(); i++)
+    for (size_t i = 0; i < Buildings.GetCapacity(); i++)
     {
         delete Buildings[i];
     }
         Buildings.Clear();
-    for (size_t i = 0; i < Workers.GetSize(); i++)
+    for (size_t i = 0; i < Workers.GetCapacity(); i++)
     {
         delete Workers[i];
     }
@@ -24,6 +24,7 @@ void DataBase::Execute()
         String Buffer;
     while(!(Buffer == "quit")) 
     {
+            Buffer.Clear();
         std::cout << "#Press number#\n1) People section\n2) Buildings section\n> ";
             std::cin >> Buffer;
         if(Buffer == "1")
@@ -54,7 +55,6 @@ void DataBase::Execute()
             else if(Buffer.isExisted("renovate"))
                 Renovate(Buffer);
         }
-            Buffer.Clear();
     };
 }
 
