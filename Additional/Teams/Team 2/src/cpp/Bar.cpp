@@ -1,6 +1,12 @@
 #include "Bar.h"
 
 #pragma region Drink
+Drink::Drink(const String& Name, size_t AlcoholPercentage, double Cost) 
+{
+    this->Name = Name;
+    this->Cost = Cost;
+        (AlcoholPercentage > 100) ? this->AlcoholPercentage = 100 : this->AlcoholPercentage = AlcoholPercentage;
+} 
 void Drink::PrintInfo() const
 {
     std::cout << "Drink: \'" << Name << "\' Alcohol: " << AlcoholPercentage << " %\n"
