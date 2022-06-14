@@ -5,10 +5,9 @@
 class Builder : public Worker 
 {
     public:
-        Builder() : Worker() {specialisation = Specialisation::Builder; TypeToBuild = Building::Type::Undefined;};
+        Builder() : Worker(), specialisation(Specialisation::Builder), TypeToBuild(Building::Type::Undefined) {};
         Builder(String Name, size_t pNumber, double Salary, Building::Type TypeToBuild) 
-            : Worker(Name, pNumber, Worker::Specialisation::Builder, Salary) 
-                {this->TypeToBuild = TypeToBuild;};
+            : Worker(Name, pNumber, Worker::Specialisation::Builder, Salary), TypeToBuild(TypeToBuild) {};
 
         void ChangeSpecialisation(Building::Type TypeToBuild);
 
