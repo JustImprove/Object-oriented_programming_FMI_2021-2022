@@ -17,8 +17,8 @@ void Doctor::CurePatient(Worker* patient, Illness illness)
          std::cout << "# {" << patient->GetName() << "} was cured from Asthma#\n";
             CureDisease(patient, illness);
     }
-    else if(((role == Role::Therapist) && (illness == Illness::Rabies))
-           || ((role == Role::Therapist) && (Illness::Alcohol_Poisoning))) 
+    else if(role == Role::Therapist && 
+            (illness == Illness::Rabies || illness == Illness::Alcohol_Poisoning)) 
     {
           CuredPatients++;
           std::cout << "# {" << patient->GetName() << "} was cured from Rabies or Alcohol poisoning#\n";
