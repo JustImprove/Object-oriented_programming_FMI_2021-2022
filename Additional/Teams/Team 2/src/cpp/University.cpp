@@ -1,4 +1,4 @@
-#include "University.h"
+#include "../h/University.h"
 
 void University::PrintInfo() const 
 {
