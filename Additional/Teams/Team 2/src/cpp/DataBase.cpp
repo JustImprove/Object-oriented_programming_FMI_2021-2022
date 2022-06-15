@@ -92,7 +92,7 @@ Doctor::Role DataBase::DefineDoctorRole(const String& str) const
     else if(str == Therapist)
         return Doctor::Role::Therapist;
     else 
-        throw std::logic_error("\nError: stated Docto specialisation was invalid !\n"); 
+        throw std::logic_error("\nError: stated Doctor specialisation was invalid !\n"); 
 }
 Professor::Role DataBase::DefineProfessorRole(const String& str) const 
 {
