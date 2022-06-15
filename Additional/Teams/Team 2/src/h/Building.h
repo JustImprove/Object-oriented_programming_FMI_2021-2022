@@ -1,5 +1,5 @@
 #pragma once
-#include "String.h"
+#include "../data_structures/String.h"
 #include <ctime> // For calculating the time
 #include "Illnesses.h"
 #pragma warning(disable:4996)
