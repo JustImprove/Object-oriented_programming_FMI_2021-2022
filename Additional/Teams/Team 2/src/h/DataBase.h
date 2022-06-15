@@ -34,8 +34,8 @@ class DataBase
         void Execute(); 
 
     private:
-        mutable Vector<Building*> Buildings; // "Mutable" because of operator[] (Vector)
-        mutable Vector<Worker*> Workers;
+        Vector<Building*> Buildings; 
+        Vector<Worker*> Workers;
             void Free();
 
         // Define f-tions
