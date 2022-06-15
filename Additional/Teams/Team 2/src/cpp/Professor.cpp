@@ -10,7 +10,7 @@ void Professor::ChangeSpecialisation(Role role)
     else
         std::cout << "Role must be defined !\n";
 }
-void Professor::GiveNewSpecialisation(Worker* other, String& NewSpecialisation) 
+void Professor::GiveNewSpecialisation(Worker* other, const String& NewSpecialisation) 
 {
     if(this == other)
         return;
