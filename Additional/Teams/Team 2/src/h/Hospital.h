@@ -17,5 +17,5 @@ class Hospital : public Building
         size_t GetDoctorsCount() const {return Doctors.GetSize();}; 
         void CurePatient(Doctor* doctor, Worker* patient, Illness illness);
     private:
-        mutable Vector<Doctor*> Doctors; 
+        Vector<Doctor*> Doctors; 
 };
