@@ -32,8 +32,8 @@ class Bar : public Building
         void AddDrink(const Drink& drink) {Drinks.Push_Back(drink);};
         void PourDrink(const String& DrinkName, Worker* Customer); // DISCLAIMER: If cutomer drink smth with alcohol % > 60, he will automatically get "Alcohol Poisoning"
     
-        size_t GetAlcoholdDrinks() const;
-        size_t GetNonAlcoholDrinks() const {return (Drinks.GetSize() - GetAlcoholdDrinks());};
+        size_t GetCountAlcoholdDrinks() const;
+        size_t GetCountNonAlcoholDrinks() const {return (Drinks.GetSize() - GetAlcoholdDrinks());};
         void PrintInfo() const override;
 
     private: 
