@@ -1,4 +1,4 @@
-#include "Building.h"
+#include "../h/Building.h"
 
 Building::Building(const String& Name, size_t Area, Type BuildingType, size_t Relevance, const String& Location) 
    : Name(Name), Area(Area), BuildingType(BuildingType), Location(Location) 
