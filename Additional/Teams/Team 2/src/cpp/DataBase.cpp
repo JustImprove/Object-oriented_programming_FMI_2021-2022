@@ -1,6 +1,6 @@
-#include "DataBase.h"
-#include "CharConstants.h"
-#include "Builder.h"
+#include "../h/DataBase.h"
+#include "../h/CharConstants.h"
+#include "../h/Builder.h"
 
 const int MIN_PARAMETRES_FOR_WORKER = 4;
 const int EXACT_PARAMETRES_FOR_BUILDINGS = 6;
