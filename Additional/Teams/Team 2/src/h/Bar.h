@@ -30,7 +30,7 @@ class Bar : public Building
 
         void AddBartender(Bartender* bartender); 
         void AddDrink(const Drink& drink) {Drinks.Push_Back(drink);};
-        void PourDrink(String DrinkName, Worker* Customer); // DISCLAIMER: If cutomer drink smth with alcohol % > 60, he will automatically get "Alcohol Poisoning"
+        void PourDrink(const String& DrinkName, Worker* Customer); // DISCLAIMER: If cutomer drink smth with alcohol % > 60, he will automatically get "Alcohol Poisoning"
     
         size_t GetAlcoholdDrinks() const;
         size_t GetNonAlcoholDrinks() const {return (Drinks.GetSize() - GetAlcoholdDrinks());};
@@ -39,5 +39,5 @@ class Bar : public Building
     private: 
         mutable Vector<Drink> Drinks; // "Mutable" because operator[] returns &T as T - Type of Vector
         Bartender* bartender; 
-            bool isDrinkExisted(String DrinkName, size_t& ReturnIndex);
+            bool isDrinkExisted(const String& DrinkName, size_t& ReturnIndex);
 };
