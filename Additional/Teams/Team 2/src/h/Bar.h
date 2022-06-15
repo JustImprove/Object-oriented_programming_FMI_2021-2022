@@ -37,7 +37,7 @@ class Bar : public Building
         void PrintInfo() const override;
 
     private: 
-        mutable Vector<Drink> Drinks; // "Mutable" because operator[] returns &T as T - Type of Vector
+        Vector<Drink> Drinks; 
         Bartender* bartender; 
             bool isDrinkExisted(const String& DrinkName, size_t& ReturnIndex);
 };
