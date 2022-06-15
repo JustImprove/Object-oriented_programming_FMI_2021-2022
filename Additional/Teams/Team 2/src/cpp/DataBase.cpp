@@ -1,18 +1,18 @@
 #include "DataBase.h"
 #include "CharConstants.h"
-#include "Builder.h"
+#include "Builder.h"a
 
 const int MIN_PARAMETRES_FOR_WORKER = 4;
 const int EXACT_PARAMETRES_FOR_BUILDINGS = 6;
 
 void DataBase::Free() 
 {
-    for (size_t i = 0; i < Buildings.GetCapacity(); i++)
+    for (size_t i = 0; i < Buildings.GetSize(); i++)
     {
         delete Buildings[i];
     }
         Buildings.Clear();
-    for (size_t i = 0; i < Workers.GetCapacity(); i++)
+    for (size_t i = 0; i < Workers.GetSize(); i++)
     {
         delete Workers[i];
     }
