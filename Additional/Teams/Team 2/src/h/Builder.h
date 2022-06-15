@@ -17,7 +17,7 @@ class Builder : public Worker
         void PrintInfo() const override;  
 
     private: 
-        mutable Vector<Building*> AlreadyBuilt; // Just copies of pointers to buildings, that were built by current Builder (exact buildings will be in final class)
+        Vector<Building*> AlreadyBuilt; // Just copies of pointers to buildings, that were built by current Builder (exact buildings will be in final class)
         Building::Type TypeToBuild;  
     bool CanBuild(const Building* obj) const 
         {return (TypeToBuild == obj->GetBuildingType());};
