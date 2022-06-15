@@ -1,7 +1,7 @@
-#include "Professor.h"
-#include "Builder.h"
-#include "Doctor.h"
-#include "CharConstants.h"
+#include "../h/Professor.h"
+#include "../h/Builder.h"
+#include "../h/Doctor.h"
+#include "../h/CharConstants.h"
 
 void Professor::ChangeSpecialisation(Role role) 
 {
