@@ -38,7 +38,7 @@
         size_t pNumber; // Smth like Identifier 
             Specialisation specialisation;
         double Salary;
-            mutable Vector<Illness> Illnesses;
+            Vector<Illness> Illnesses;
 
     void CureDisease(Worker* patient, Illness illness); // F-tion isn't going to be used by user or be called from object. Only inside derived class "Doctor"
 };
