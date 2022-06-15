@@ -1,6 +1,6 @@
 #pragma once
 #include "Illnesses.h" 
-#include "String.h"
+#include "../data_structures/String.h"
 
 /*Abstract*/ class Worker 
 {
