@@ -20,7 +20,7 @@ class Professor : public Worker
         Role GetRole() const {return role;};
         
         // Трябва да бъде извън класа - сега е просто заради демонстративни цели
-        void GiveNewSpecialisation(Worker* other, String& NewSpecialisation); // String reqires non-const var to compare with "=="
+        void GiveNewSpecialisation(Worker* other, const String& NewSpecialisation); 
         void PrintInfo() const override;
 
     private:
