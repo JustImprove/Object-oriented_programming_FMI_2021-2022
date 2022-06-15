@@ -1,4 +1,4 @@
-#include "Worker.h"
+#include "../h/Worker.h"
 
 void Worker::AddIllness(Illness illness) 
 {
