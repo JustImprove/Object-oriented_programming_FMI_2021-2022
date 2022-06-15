@@ -25,7 +25,7 @@ void Bar::AddBartender(Bartender* bartender)
     else 
         std::cout << "#Bartender is already existed in this {" << Name << "} #\n";
 };
-void Bar::PourDrink(String DrinkName, Worker* Customer)
+void Bar::PourDrink(const String& DrinkName, Worker* Customer)
 {
     if(bartender == nullptr)
     {
@@ -76,7 +76,7 @@ void Bar::PrintInfo() const
         Drinks[i].PrintInfo();
     }
 };
-bool Bar::isDrinkExisted(String DrinkName, size_t& ReturnIndex) 
+bool Bar::isDrinkExisted(const String& DrinkName, size_t& ReturnIndex) 
 {    
     for (size_t i = 0; i < Drinks.GetSize(); i++) 
     {
