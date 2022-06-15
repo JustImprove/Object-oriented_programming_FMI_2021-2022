@@ -55,7 +55,7 @@ void Bar::PourDrink(const String& DrinkName, Worker* Customer)
             std::cout << "# " << Customer->GetName() << " is overdrunked and he can't drink more alcohol#\n";
     }
 };
-size_t Bar::GetAlcoholdDrinks() const
+size_t Bar::GetCountAlcoholdDrinks() const
 {
         int Count = 0;
     for (size_t i = 0; i < Drinks.GetSize(); i++)
