@@ -1,4 +1,4 @@
-#include "Hospital.h"
+#include "../h/Hospital.h"
 
 void Hospital::PrintInfo() const 
 {
