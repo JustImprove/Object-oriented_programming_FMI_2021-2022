@@ -1,4 +1,4 @@
-#include "Doctor.h"
+#include "../h/Doctor.h"
 
 void Doctor::CurePatient(Worker* patient, Illness illness) 
 {
