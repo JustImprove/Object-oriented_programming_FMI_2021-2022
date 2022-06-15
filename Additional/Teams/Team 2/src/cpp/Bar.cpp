@@ -52,7 +52,7 @@ void Bar::PourDrink(const String& DrinkName, Worker* Customer)
     if(Drinks[ReturnIndex].GetAlcoholPercentage() > 60) 
     {
         Customer->AddIllness(Illness::Alcohol_Poisoning);
-            std::cout << "# " << Customer->GetName() << " is overdrunked and he can't drink morea alcohol#\n";
+            std::cout << "# " << Customer->GetName() << " is overdrunked and he can't drink more alcohol#\n";
     }
 };
 size_t Bar::GetAlcoholdDrinks() const
