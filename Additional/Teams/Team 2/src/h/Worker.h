@@ -12,7 +12,7 @@
 
             virtual ~Worker() = default; 
         Worker() : pNumber(0), Salary(0) {}; 
-        Worker(String Name, size_t pNumber, Specialisation specialisation, double Salary) 
+        Worker(const String& Name, size_t pNumber, Specialisation specialisation, double Salary) 
             : Name(Name), specialisation(specialisation), Salary(Salary), pNumber(pNumber) {};
         Worker(Worker&& other) = default; // Move semantics are defined already in String 
         Worker& operator=(Worker&& other) = default; 
