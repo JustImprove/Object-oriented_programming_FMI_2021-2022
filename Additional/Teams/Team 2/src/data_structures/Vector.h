@@ -20,7 +20,8 @@ class Vector
         void Clear() {Free(); Size = Capacity = 0;}; 
 
         // Editing data
-            T& operator[](size_t Index);  
+            T& operator[](size_t Index);
+            const T& operator[](size_t Index) const;
         void Push_Back(const T& Element); 
         void Pop_Back(); 
         void Push_Front(const T& Element); 
@@ -127,6 +128,15 @@ void Vector<T>::Resize(size_t ExtendOn)
 #pragma region Editing data
 template<class T>
 T& Vector<T>::operator[](size_t Index) 
+{
+    if(Index >= Size)
+        throw std::out_of_range("\nIndex of range exception\n");
+    
+    return Collection[Index];
+}
+
+template<class T>
+const T& Vector<T>::operator[](size_t Index) const
 {
     if(Index >= Size)
         throw std::out_of_range("\nIndex of range exception\n");
