@@ -18,5 +18,5 @@ class University : public Building
         void GiveNewSpecialisation(Professor* professor, Worker* other, String& NewSpecialisation); 
 
     private: 
-        mutable Vector<Professor*> Professors; // "Mutable", because of operator[] from Vector, that return & on object
+        Vector<Professor*> Professors; // "Mutable", because of operator[] from Vector, that return & on object
 };
