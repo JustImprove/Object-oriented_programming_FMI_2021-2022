@@ -1,4 +1,5 @@
-#include "DataBase.h"
+#include "../h/DataBase.h"
+#include "../data_structures/String.cpp" // Is mainly for compiler GCC -> to avoid errors/warnings
 
 // P.s: all names of specialisations, types are placed in "CharConstants.h"
 // P.s 2: User can perform only 1 task after logging-in. Then, the program will propose to start from choosing the sections: people, buildings
