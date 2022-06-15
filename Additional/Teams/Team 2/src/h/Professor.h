@@ -13,7 +13,7 @@ class Professor : public Worker
         };
     
         Professor() : Worker(), StudentsThatWereTaught(0), specialisation(Specialisation::Professor), role(Role::Undefined) {};
-        Professor(String Name, size_t pNumber, double Salary, Role role): Worker(Name, pNumber, Specialisation::Professor, Salary) 
+        Professor(const String& Name, size_t pNumber, double Salary, Role role): Worker(Name, pNumber, Specialisation::Professor, Salary) 
             : StudentsThatWereTaught(0), role(role) {};
         
         void ChangeSpecialisation(Role role);
